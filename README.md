@@ -1,13 +1,13 @@
-# nginx-php56
-A Nginx + PHP 5.6 (FPM) base container. Builds upon on the excellent [phusion/baseimage-docker](https://github.com/phusion/baseimage-docker) container. You can find the docker automated build [here](https://registry.hub.docker.com/u/mstrazds/nginx-php56/).
+# nginx-php7
+A Nginx + PHP 7.2 (FPM) base container. Builds upon on the excellent [phusion/baseimage-docker](https://github.com/phusion/baseimage-docker) container. You can find the docker automated build [here](https://registry.hub.docker.com/u/mstrazds/nginx-php56/).
 
 ### Services
 All services are defined and managed using the phusion/baseimage methodology. Logs are output using syslog and can be accessed using ``docker logs {container}``.
 
 * Nginx
-* PHP-FPM (5.6)
+* PHP-FPM (7.2)
 * NTPD
-* New Relic APM
+* New Relic APM (disabled)
 
 ### Default Settings
 The container sets up a www root folder in the following location:

@@ -22,13 +22,13 @@ server {
 
     error_page 404 /index.php;
 
-    # pass the PHP scripts to php5-fpm
+    # pass the PHP scripts to php7-fpm
     # Note: \.php$ is susceptible to file upload attacks
     # Consider using: "location ~ ^/(index|app|app_dev|config)\.php(/|$) {"
     location ~ \.php$ {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        # With php5-fpm:
-        fastcgi_pass unix:/var/run/php5.6-fpm.sock;
+        # With php7-fpm:
+        fastcgi_pass unix:/var/run/php7.2-fpm.sock;
         fastcgi_index index.php;
         include fastcgi_params;
         #fastcgi_param REMOTE_ADDR $http_x_real_ip;
@@ -119,7 +119,7 @@ server {
     #root   /usr/share/nginx/html;
     #}
 
-    # pass the PHP scripts to php5-fpm
+    # pass the PHP scripts to php7-fpm
     # Note: \.php$ is susceptible to file upload attacks
     # Consider using: "location ~ ^/(index|app|app_dev|config)\.php(/|$) {"
 
@@ -127,8 +127,8 @@ server {
 
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
 
-        # With php5-fpm:
-        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        # With php7-fpm:
+        fastcgi_pass unix:/var/run/php7-fpm.sock;
         fastcgi_index index.php;
         include fastcgi_params;
         fastcgi_param REMOTE_ADDR $http_x_real_ip;
