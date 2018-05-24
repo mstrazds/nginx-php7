@@ -6,7 +6,7 @@ nginxphp:
   dockerfile: Dockerfile
   privileged: true
   ports:
-    - "8080:80"
+    - "8880:80"
     - "443:443"
     - "2222:22"
   environment:

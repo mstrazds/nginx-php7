@@ -14,7 +14,7 @@ RUN apt-get update -y && apt-get install -y wget .build-essential python-softwar
 RUN add-apt-repository -y ppa:ondrej/php && add-apt-repository -y ppa:nginx/stable
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -q -y php7.2 php7.2-dev php7.2-fpm php7.2-mysqlnd \
 	php7.2-curl php7.2-gd php7.2-mbstring php7.2-xml php7.2-cli php7.2-intl php7.2-imap php7.2-tidy \
-	php7.2-xml php7.2-xmlrpc zip unzip php7.2-zip nginx-full ntp
+	php7.2-xml php7.2-xmlrpc php7.2-gmp zip unzip php7.2-zip nginx-full ntp
 
 # Create new symlink to UTC timezone for localtime
 RUN unlink /etc/localtime
